@@ -1,0 +1,78 @@
+Spring Framework consist of 7 modules -> 
+1. Spring Core 
+2. Spring AOP
+3. Spring Web MVC
+4. Spring DAO
+5. Spring ORM
+6. Spring context
+7. Spring Web flow
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. Spring Core Module: 
+The Spring Core module, which is the core component of the Spring framework, provides the IoC container.
+There are two types of implementations of the Spring container:
+				 Bean Factory 										Application Context
+	a. It is a fundamental container that provides the 				a. It is an advanced container that extends the BeanFactory that
+		basic functionality for managing beans.						provides all basic functionality and adds some advanced features.
+	b. It is suitable to build standalone applications.				b. It is suitable to build Web applications, integration with AOP modules,
+														ORM and distributed applications.
+	c. It supports only Singleton and Prototype bean scopes.			c. It supports all types of bean scopes such as
+															Singleton, Prototype, Request, Session etc.
+	d. It does not support Annotations. In Bean Autowiring, 			d. It supports Annotation based configuration in Bean Autowiring.
+		we need to configure the properties in XML file only.
+	
+2. Spring AOP Module:
+AOP breaks down the programs into aspects or concerns.
+Spring AOP module allows you to implement concerns or aspects in a Spring application in Spring AOP, 
+	the aspects are the regular Spring beans or regular classes annotated with @Aspect annotation.
+These aspects help in transaction management and logging and failure monitoring of an application.
+For example-
+		Transaction management is required in bank operations such as transferring an amount from one account to another, 
+		Spring AOP module provides a transaction management abstraction layer that can be applied to transaction APIs.
+
+3. Spring ORM Module:
+The Spring ORM module is used for accessing data from databases in an application. 
+It provides APIs for manipulating databases with JDO, Hibernate, and iBatis. 
+Spring ORM supports DAO, which provides a convenient way to build the following DAOs-based ORM solutions:
+	a. Simple declarative transaction management
+	b. Transparent exception handling
+	c. Thread-safe, lightweight template classes
+	d. DAO support classes
+	e. Resource management
+
+4. Spring Web MVC Module:
+The Web MVC module of Spring implements the MVC architecture for creating Web applications. 
+It separates the code of model and view components of a Web application. 
+In Spring MVC, when a request is generated from the browser, it first goes to the DispatcherServlet class (Front Controller), 
+	which dispatches the request to a controller (SimpleFormController class or AbstractWizardformController class) using a set of handler mappings. 
+The controller extracts and processes the information embedded in a request and sends the result to the DispatcherServlet class 
+	in the form of the model object. 
+Finally, the DispatcherServlet class uses ViewResolver classes to send the results to a view, which displays these results to the users.
+
+5. Spring Web Flow Module:
+The Spring Web Flow module is an extension of the Spring Web MVC module. Spring Web MVC framework provides form controllers, 
+	such as class SimpleFormController and AbstractWizardFormController class, to implement predefined workflow.
+ The Spring Web Flow helps in defining XML file or Java Class that manages the workflow between different pages of a Web application.
+Advantages-
+	The flow between different UIs of the application is clearly provided by defining Web flow in XML file.
+	Web flow definitions help you to virtually split an application in different modules and reuse these modules in multiple situations.
+
+6. Spring Web DAO Module:
+The DAO package in the Spring framework provides DAO support by using data access technologies such as JDBC, Hibernate, or JDO.
+This module introduces a JDBC abstraction layer by eliminating the need for providing tedious JDBC coding.
+Spring DAO package supports heterogeneous Java Database Connectivity and O/R mapping, which helps Spring work with several data access technologies.
+For easy and quick access to database resources, the Spring framework provides abstract DAO base classes.
+
+7. Spring Application Context Module:
+The Spring Application context module is based on the Core module.
+Application context org.springframework.context.ApplicationContext is an interface of BeanFactory. 
+This module derives its feature from the org.springframework.beans package and also supports functionalities 
+	such as internationalization (I18N), validation, event propagation, and resource loading. 
+The Application context implements MessageSource interface and provides the messaging functionality to an application.
+
+
+Spring MVC
+Spring Data JPA
+Spring Security
+Spring Profiles
+Spring Transaction
+Spring Testing
